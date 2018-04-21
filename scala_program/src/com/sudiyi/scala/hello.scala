@@ -13,5 +13,8 @@ object hello {
       i += 1
     }
     println()
+
+    args.foreach(arg => println(arg))
+
   }
 }
