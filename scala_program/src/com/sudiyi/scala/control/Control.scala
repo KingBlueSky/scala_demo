@@ -33,6 +33,15 @@ object Control {
     for (i <- 0 until 4) {
       println(i)
     }
+
+    //过滤filter
+    val filesHeres = (new File(".")).listFiles()
+    for (file <- filesHeres) {
+      if (!file.getName().endsWith(".scala"))
+      println(file + "------------")
+    }
+
+    ifEven(4)
   }
 
   def gcbLoop(x : Int, y : Int) : Int = {
@@ -45,4 +54,11 @@ object Control {
     }
     b
   }
+
+ def ifEven(n: Int): Unit = {
+   val half =
+     if (n % 2 == 0) n
+     else
+       throw new RuntimeException("n must be even")
+ }
 }
